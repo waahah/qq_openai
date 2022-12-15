@@ -204,7 +204,7 @@
 
 ## 感谢
 
--https://github.com/easydu2002/chat_gpt_oicq
+- https://github.com/easydu2002/chat_gpt_oicq
 - https://github.com/takayama-lily/oicq
 - https://github.com/transitive-bullshit/chatgpt-api
 - https://chat.openai.com/
