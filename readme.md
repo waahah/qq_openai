@@ -62,7 +62,7 @@
 
      `officialAPI.identity` 用于身份设定，对话提示。 [另见](https://beta.openai.com/docs/guides/completion/prompt-design)
 
-     有三种设置方式 (另见讨论[issue](https://github.com/easydu2002/chat_gpt_oicq/issues/3#issuecomment-1352287977))
+     有三种设置方式：
 
      **下面以一个猫娘人格的为例**
      ![COX@362Q1QQZX~ND) 4DE`D](https://user-images.githubusercontent.com/59076088/207781791-ffcf459f-1a74-45ea-a03a-c439743a8e92.png)
