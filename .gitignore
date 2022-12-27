@@ -7,3 +7,9 @@ data
 log
 
 config.json
+
+version-local
+
+build
+
+docker

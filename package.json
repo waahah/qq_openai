@@ -2,12 +2,25 @@
   "name": "chat_gpt_oicq",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.ts",
+  "bin": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tsx src/main.ts",
     "lint": "eslint . --fix",
-    "build:win64": "pkg --t node18-win src/main.ts"
+    "patch": "npx patch-package --patch-dir ./.patches",
+    "build": "node build.js",
+    "postinstall": "npx patch-package --patch-dir ./.patches"
+  },
+  "pkg": {
+    "assets": [],
+    "scripts": ["build/app.js"],
+    "targets": [
+      "win",
+      "linux",
+      "mac"
+    ],
+    "outputPath": "build"
   },
   "repository": {
     "type": "git",
@@ -20,9 +33,11 @@
   },
   "homepage": "https://github.com/easydu2002/grasscutter-oicq#readme",
   "devDependencies": {
+    "@types/inquirer": "^9.0.3",
     "@types/node": "^18.11.11",
     "@types/node-schedule": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "esbuild-plugin-ignore": "^1.1.1",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -31,12 +46,17 @@
     "typescript": "*"
   },
   "dependencies": {
-    "chatgpt": "^2.3.3",
+    "chalk": "^5.2.0",
+    "chatgpt": "^3.3.1",
     "dotenv": "^16.0.3",
+    "esbuild": "^0.16.10",
+    "inquirer": "^9.1.4",
     "node-schedule": "^2.1.0",
     "oicq": "^2.3.1",
+    "oicq-guild": "^0.1.0",
     "openai": "^3.1.0",
-    "puppeteer": "^19.4.0",
+    "pkg": "^5.8.0",
+    "puppeteer": "^19.4.1",
     "winston": "^3.8.2"
   }
 }
